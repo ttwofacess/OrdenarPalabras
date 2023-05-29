@@ -1,0 +1,108 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Fuente tipográfica principal */
+    color: #333; /* Color de texto principal */
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    color: #ff5500; /* Color de título */
+  }
+  
+  header {
+    background-color: #f5f5f5; /* Color de fondo para el encabezado */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  main {
+    display: flex; /* Utilizar flexbox */
+    gap: 20px; /* Separación mínima entre los divs */
+    align-items: stretch; /* Misma altura para los divs */
+    padding: 20px;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    width: calc(66.67% - 10px); /* Dos tercios del ancho del div con un espacio de 10px */
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Incluir el tamaño del borde en el ancho */
+  }
+  
+  button[type="submit"] {
+    background-color: #ff5500; /* Color de fondo para el botón de enviar */
+    color: #fff; /* Color de texto para el botón de enviar */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #ff3300; /* Color de fondo para el botón de enviar al pasar el cursor */
+  }
+  
+  dialog {
+    padding: 20px;
+    background-color: #f5f5f5; /* Color de fondo para el diálogo */
+  }
+  
+  button {
+    background-color: #ff5500; /* Color de fondo para el botón del diálogo */
+    color: #fff; /* Color de texto para el botón del diálogo */
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ff3300; /* Color de fondo para el botón del diálogo al pasar el cursor */
+  }
+  
+  #preguntas,
+  #respuestas {
+    border: 1px solid #ccc; /* Bordes visibles */
+    padding: 10px;
+    flex: 1; /* Dividir el espacio disponible de manera equitativa */
+    box-sizing: border-box; /* Incluir el tamaño del borde en el ancho */
+  }
+
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Estilos para pantallas más pequeñas (responsive design) */
+  @media (max-width: 768px) {
+    header {
+      padding: 10px;
+    }
+  
+    main {
+      flex-direction: column; /* Apilar los divs en pantallas más pequeñas */
+    }
+  
+    input[type="text"] {
+      width: 100%;
+      padding: 3px;
+      margin-bottom: 5px;
+    }
+  
+    button[type="submit"] {
+      padding: 8px 15px;
+    }
+  
+    dialog {
+      padding: 10px;
+    }
+  
+    button {
+      padding: 3px 6px;
+    }
+  }
+  
