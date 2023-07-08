@@ -22,7 +22,9 @@ $MiArray = array('ortodoncia', 'elefante', 'helicoptero', 'artificial', 'logica'
             $form = "<form method='POST' action='exec.php'>";
             for($i=0; $i < count($MiArray); $i++)
             {
-                $form .= "La palabra " . ($i + 1) . " es: " . str_shuffle($MiArray[$i]) . "<br />" . "Tu respuesta: " . "<input type='text' name='word".$i."'><br />";
+                // $form .= "La palabra " . ($i + 1) . " es: " . str_shuffle($MiArray[$i]) . "<br />" . "Tu respuesta: " . "<input type='text' name='word".$i."'><br />";
+
+                $form .= "La palabra " . ($i + 1) . " es: " . str_shuffle($MiArray[$i]) . "<br />" . "Tu respuesta: " . "<input type='text' value='".($_SESSION['palabra'.$i])."' name='word".$i."'><br />";
             }
 
             $button = "<button type='submit'>Enviar</button>";
@@ -35,7 +37,8 @@ $MiArray = array('ortodoncia', 'elefante', 'helicoptero', 'artificial', 'logica'
         <?php
             for($j = 0; $j < 6; $j++)
             {
-                $answer .= "Respuesta ".($j+1)."<br/>" . "<input class='res' type='text' name='r" .$j. "'><br />"; 
+                //$answer .= "Respuesta ".($j+1)."<br/>" . "<input class='res' type='text' name='r" .$j. "'><br />";
+                $answer .= "Respuesta ".($j+1)."<br/>" . "<input class='res' type='text' name='r" .$j. "' value='" .$_SESSION['R'. ($j+1)] . "'><br />"; 
             }    
 
             echo $answer;
